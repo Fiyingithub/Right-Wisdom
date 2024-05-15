@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Guardian</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rancho&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#F9C18E]">
+    <div class="w-[100vw] h-[100vh] flex gap-20">
+        <div class=" w-[25vw] h-[100vh] rounded-br-[40px] rounded-tr-[40px] bg-[#F97903] text-center pt-6">
+            <div class="w-[75px] h-[75px] border-2 border-orange-300 rounded-[300px] bg-white text-2xl text-[#F97903] font-[700] pt-[20px] mx-[auto]" style="text-shadow: 2px 2px  #D9700E;">RWS</div><br>
+
+            <h1 class="text-5xl font-[600] text-white" style="text-shadow: 2px 2px 2px black;">Right Wisdom School</h1><br><br>
+
+            <div class="">
+                <div class="flex gap-2 items-center justify-center">
+                    <img class="w-6 h-6" src="/asset/dashboard.png" alt="dashboard-image">
+                    <a href="admin-dashboard.html" class="text-3xl font-[500] text-white">Dashboard</a>
+                    
+                </div><br>
+
+                <div class="">
+                    <div class="flex gap-2 justify-center items-center cursor-pointer">
+                        <img class="w-6 h-6" src="/asset/lecture.png" alt="dashboard-image">
+                        <p class="text-xl hover:font-[700] hover:text-2xl font-[500] text-white" onclick="teach()">Teacher</p>
+                        <img class="w-[18px] mt-[5px] ml-6 h-[18px] rounded-[50px] font-[700] bg-white" src="/asset/greater-than.png" alt="greater-than">
+                    </div>
+
+                    <div class="text-xl font-[500] mt-[10px]">
+                        <div class="flex gap-2 justify-center items-center hover:font-[700] hover:text-lg" style="display: none;" id="add">
+                            <b class="text-4xl text-white font-[700]">∙</b>
+                            <a class=" text-white -mt-8" href="addteacher.html">Add Teacher</a>
+                       </div>
+                       <div class="flex justify-center gap-2 items-center hover:font-[700] hover:text-lg ml-10" style="display: none;" id="view">
+                        <b class="text-4xl mt-10 text-white font-[700]">∙</b>
+                        <a class=" text-white -mt-8" href="#">View all Teachers</a>
+                           
+                       </div>
+                    </div>
+                </div><br>
+
+                <div class="">
+                    <div class="flex gap-2 justify-center items-center cursor-pointer">
+                        <img class="w-6 h-6" src="/asset/baby.png" alt="Guardian image">
+                        <p class="text-xl hover:font-[700] hover:text-2xl font-[500] text-white" onclick="parent()">Guardian</p>
+                        <img class="w-[18px] mt-[5px] ml-4 h-[18px] rounded-[50px] font-[700] bg-white" src="/asset/greater-than.png" alt="greater-than">
+                    </div>
+
+                    <div class="text-xl font-[500] mt-[10px]">
+                        <div class="flex gap-2 justify-center items-center hover:font-[700] hover:text-lg" style="display: none;" id="guard">
+                            <b class="text-4xl text-white font-[700]">∙</b>
+                            <a class=" text-white -mt-8" href="addguardian.html">Add Guardian</a>
+                       </div>
+                    </div>
+                </div><br>
+
+                <div class="">
+                    <div class="flex gap-2 justify-center items-center cursor-pointer">
+                        <img class="w-6 h-6" src="/asset/scholar.png" alt="dashboard-image">
+                        <p class="text-xl hover:font-[700] hover:text-2xl font-[500] text-white" onclick="student()">Student</p>
+                        <img class="w-[18px] mt-[5px] ml-6 h-[18px] rounded-[50px] font-[700] bg-white" src="/asset/greater-than.png" alt="greater-than">
+                    </div>
+
+                    <div class="text-xl font-[500] mt-[10px]">
+                        
+                       <div class="flex justify-center gap-2 items-center hover:font-[700] hover:text-lg ml-8" style="display: none;" id="viewStudent">
+                          <b class="text-4xl mt-10 text-white font-[700]">∙</b>
+                          <a class=" text-white -mt-8" href="#">View all Students</a>   
+                       </div>
+                    </div>
+                </div><br>
+                
+                <div class="flex justify-center ml-[-70px] gap-2 items-center">
+                    <img class="w-6 h-6" src="/asset/exit (1).png" alt="exit">
+                    <a href="#" class="text-white  hover:font-[700] hover:text-xl font-[700]">Logout</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="lg:w-[65vw] w-[100vw] h-[100vh] pt-10">
+            <div class="w-[60vw] h-[50px] pl-8 gap-1 flex items-center rounded-[25px] bg-[white] shadow-xl">
+                <img class="w-8 h-8" src="/asset/protection.png" alt="">
+                <h1 class="text-xl font-[700]">Admin</h1>
+            </div><br><br>
+
+            <div class=" w-[60vw] h-[600px] rounded-br-[25px] rounded-bl-[25px] bg-white shadow-xl">
+                <h1 class="font-[700] text-3xl ml-10 pt-10">Add Guardian</h1><br><br><br>
+
+                <form action="" class="px-10">
+                    <div class="flex gap-10">
+                        <div class="">
+                            <div class="flex items-center">
+                                <img class="w-[20px] h-[20px]" src="/asset/user (2).png" alt="user">
+                                <label class="text-lg font-[500]" for="">Firstname</label>
+                            </div>
+                            <input class="w-[25vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="text" name="" id="" placeholder="Enter Firstname">
+                        </div>
+    
+                        <div class="">
+                            <div class="flex items-center">
+                                <img class="w-[20px] h-[20px]" src="/asset/user (2).png" alt="user">
+                                <label class="text-lg font-[500]" for="">Lastname</label>
+                            </div>
+                            <input required class="w-[25vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="text" name="" id="" placeholder="Enter Lastname">
+                        </div>
+                    </div><br>
+
+                    <div class="flex gap-10">
+                        <div class="">
+                            <div class="flex gap-[2px] items-center">
+                                <img class="w-[20px] h-[20px]" src="/asset/phone-call (2).png" alt="user">
+                                <label class="text-lg font-[500]" for="">Phone Number</label>
+                            </div>
+                            <input required class="w-[25vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="text" name="" id="" placeholder="Phone Number">
+                        </div>
+    
+                        <div class="">
+                            <div class="flex gap-[3px] items-center">
+                                <img class="w-[20px] h-[20px]" src="/asset/mail.png" alt="user">
+                                <label class="text-lg font-[500]" for="">Email Address</label>
+                            </div>
+                            <input required class="w-[25vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="email" name="" id="" placeholder="Email Address">
+                        </div>
+                    </div><br>
+
+                    <div class="">
+                        <div class="flex gap-[2px] items-center">
+                            <img class="w-[20px] h-[20px]" src="/asset/placeholder.png" alt="user">
+                            <label class="text-lg font-[500]" for="">Home Address</label>
+                        </div>
+                        <input required class="w-[52.5vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="text" name="" id="" placeholder="Home Address">
+                    </div><br>
+
+                    <button class="text-xl text-white rounded-lg shadow-xl mt-10 font-[600] ml-[20vw] border-2 w-[200px] h-[50px] bg-[#F97903]">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        function teach(){
+          let add=  document.getElementById("add");
+          let view= document.getElementById("view");
+          
+          if(add.style.display === "none"){
+               add.style.display = "block";
+            }
+          else{
+               add.style.display = "none";
+            }
+       
+          if(view.style.display === "none"){
+               view.style.display = "block";
+            }
+          else{
+               view.style.display = "none";
+            }
+        }
+
+       
+        function parent(){
+         let guard=  document.getElementById("guard");
+          
+          if(guard.style.display === "none"){
+               guard.style.display = "block";
+            }
+          else{
+               guard.style.display = "none";
+            }
+       
+        }
+
+        function student(){
+        //   let addstudent=  document.getElementById("addStudent");
+          let viewstudent= document.getElementById("viewStudent");
+          
+        //   if(addstudent.style.display === "none"){
+        //        addstudent.style.display = "block";
+        //     }
+        //   else{
+        //        addstudent.style.display = "none";
+        //     }
+       
+          if(viewstudent.style.display === "none"){
+               viewstudent.style.display = "block";
+            }
+          else{
+               viewstudent.style.display = "none";
+            }
+        }
+
+       
+       
+    </script>
+
+
+</body>
+</html>
