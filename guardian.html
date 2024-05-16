@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Tailwind/tailwind.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</head>
+<body class="bg-orange-400 w-full h-screen">
+    <!-- div for search -->
+    <div class="bg-white w-[1000px] h-[60px] mt-[20px] ml-[300px] rounded-[15px] flex pt-3">
+        <div >
+            <p class="ml-[40px] mt-2 text-orange-400 font-[500]">Staff</p>
+        </div>
+         <div class="flex ">
+            <input type="text" placeholder="search" class=" hidden lg:block xl:block w-[700px] h-[40px] rounded-[50px] pl-[60px]   lg:ml-[40px] lg:w-[600px] xl:ml-[40px] placeholder:text-orange-400 placeholder:text-2xl  font-[500] outline-none border-2 border-orange-400 ">
+            <ion-icon name="search-outline" class="hidden lg:block xl:block w-[20px] h-[20px] text-orange-400 ml-[-50px] mt-[10px] font-[700]" ></ion-icon>
+            <ion-icon name="notifications-outline" class="hidden lg:block xl:block w-[20px] h-[20px] text-orange-400 ml-[45px] mt-[10px]" ></ion-icon>
+            <ion-icon name="mail-open-outline" class=" text-orange-400 lg:w-[20px] lg:h-[20px] ml-[10px] mt-[10px]  "></ion-icon>
+             <ion-icon name="person-outline" class="mt-1 w-[20px] h-[20px] text-orange-400 ml-[10px] mt-[10px]"></ion-icon>
+              
+         </div>
+    </div>
+ <!-- End of search bar -->
+
+ <!-- Dashboard begins -->
+
+    <div class="block lg:flex xl:flex ">
+        <!-- sidebar -->
+        <div class="hidden lg:block xl:block w-[80%] lg:w-[20%] xl:w-[20%] h-screen lg:h-[600px]  bg-orange-600 mt-[-77px] ml-[20px]  pl-[70px] text-white pt-[40px]  " id="dashboard">
+            <div class="bg-white w-[70px] text-orange-500 h-[70px] rounded-[50%] ml-[10px] mt-[-10px] text-center pt-4 font-[700] text-2xl" >
+                <p > RWS</p>
+               
+            </div>
+            <p class="text-2xl ml-[-20px] font-[500]">Right Wisdom</p>
+            <p class="text-2xl ml-4 font-[500]">School</p>        
+            <a href="dashboard.html"><div class="flex  hover:font-[700] hover:text-[20px] mt-[20px]"><ion-icon class="mt-1 " name="car-outline"></ion-icon><p class="ml-1"> Teacher</p></div></a>
+            <a href="student.html"><div class="flex  hover:font-[700] hover:text-[20px] mt-[20px]"><ion-icon name="person-outline" class="mt-1"></ion-icon><p class="ml-1"> Student</p></div></a>
+            
+            <a href="guardian.html"><div class="flex  hover:font-[700] hover:text-[20px] mt-[20px]"><ion-icon name="notifications-outline" class="mt-1" ></ion-icon><p class="ml-1"> Guardian</p></div></a>
+            <a href="logout.html"><div class="flex  hover:font-[700] hover:text-[20px] mt-[20px]"><ion-icon name="exit-outline" class="mt-1"></ion-icon><p class="ml-1"> Logout</p></div></a>
+        </div>
+        <div id="search" class="block lg:hidden xl:hidden">
+        <input type="text" placeholder="Search..." class=" block lg:hidden xl:hidden mt-5 mx-auto w-[70vw] py-2 rounded-[50px] px-8 lg:w-[600px]   text-purple-800 ">
+        <ion-icon name="search-outline" class=" block lg:hidden xl:hidden mt-[-30px] ml-[17vw] md:ml-[560px]" ></ion-icon>
+        </div>
+        
+    <div class="pt-[20px] lg:pt-[0px] xl:pt-[0px] ml-[20px] lg:ml-[20px] xl:ml-[20px] mt-[40px] lg:mt-[10px] xl:mt-[10px]  w-[80%]  lg:w-[75%] xl:w-[75%]   rounded-[20px] py-5 bg-white" id="profile"  > 
+        <p class="text-orange-400 text-2xl ml-16 mt-4">Guardian Form</p>
+        <div class="ml-16 mt-4">
+       <form action="">
+            <input type="text" placeholder="Firstname" class="border-2 border-orange-400 w-[420px] h-[40px] pl-4 rounded-[5px] outline-none">
+            <input type="text" placeholder="Lastname" class="border-2 border-orange-400 w-[420px] h-[40px] pl-4 ml-4 rounded-[5px] outline-none"><br>
+            <input type="text" placeholder="Email" class="border-2 border-orange-400 w-[420px] h-[40px] pl-4 mt-2 rounded-[5px] outline-none">
+            <input type="text" placeholder="Username" class="border-2 border-orange-400 w-[420px] h-[40px] pl-4 ml-4 mt-2 rounded-[5px] outline-none"><br>
+            <input type="text" placeholder="Password" class="border-2 border-orange-400 w-[420px] h-[40px] pl-4 mt-2 rounded-[5px] outline-none">
+            <input type="text" placeholder="Student Id" class="border-2 border-orange-400 w-[420px] h-[40px] pl-4 ml-4 mt-2 rounded-[5px] outline-none"><br>
+            
+            <div class="bg-gray-300 w-[200px] h-[200px] mt-4 rounded-[5px] pt-2 pl-2">
+                <p>Upload Image</p>
+            </div>
+            <input type="file" class="mt-2">
+            <button class="bg-orange-400 w-[150px] h-[40px] ml-8 text-white text-2xl rounded-[10px]">Submit</button>
+        </form>
+    </div>
+   </div>
+    
+        
+    </div>
+        <!-- End of dashboard -->
+        
+</body>
+</html>
