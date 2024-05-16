@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Guardian</title>
+    <title>View All Teacher</title>
     <link rel="stylesheet" href="./src/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,56 +116,80 @@
                 </div>
             </div><br>
 
-            <div class="w-[78vw] h-[630px] rounded-br-lg rounded-bl-lg bg-white shadow-2xl pl-8">
-                <h1 class="font-[700] text-3xl ml-10 pt-10">Add Guardian</h1><br><br><br>
-
-                <form action="" class="">
-                    <div class="flex gap-10">
-                        <div class="">
-                            <div class="flex items-center">
-                                <img class="w-[20px] h-[20px]" src="/asset/user (2).png" alt="user">
-                                <label class="text-lg font-[500]" for="">Firstname</label>
-                            </div>
-                            <input class="w-[35vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="text" name="" id="" placeholder="Enter Firstname">
-                        </div>
-    
-                        <div class="">
-                            <div class="flex items-center">
-                                <img class="w-[20px] h-[20px]" src="/asset/user (2).png" alt="user">
-                                <label class="text-lg font-[500]" for="">Lastname</label>
-                            </div>
-                            <input required class="w-[35vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="text" name="" id="" placeholder="Enter Lastname">
-                        </div>
-                    </div><br>
-
-                    <div class="flex gap-10">
-                        <div class="">
-                            <div class="flex gap-[2px] items-center">
-                                <img class="w-[20px] h-[20px]" src="/asset/phone-call (2).png" alt="user">
-                                <label class="text-lg font-[500]" for="">Phone Number</label>
-                            </div>
-                            <input required class="w-[35vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="text" name="" id="" placeholder="Phone Number">
-                        </div>
-    
-                        <div class="">
-                            <div class="flex gap-[3px] items-center">
-                                <img class="w-[20px] h-[20px]" src="/asset/mail.png" alt="user">
-                                <label class="text-lg font-[500]" for="">Email Address</label>
-                            </div>
-                            <input required class="w-[35vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="email" name="" id="" placeholder="Email Address">
-                        </div>
-                    </div><br>
-
-                    <div class="">
-                        <div class="flex gap-[2px] items-center">
-                            <img class="w-[20px] h-[20px]" src="/asset/placeholder.png" alt="user">
-                            <label class="text-lg font-[500]" for="">Home Address</label>
-                        </div>
-                        <input required class="w-[72.5vw] pl-4 h-[50px] border-2 border-gray-400 focus:outline-[#F97903] rounded-lg" type="text" name="" id="" placeholder="Home Address">
-                    </div><br>
-
-                    <button class="text-xl text-white rounded-lg shadow-xl mt-10 font-[600] ml-[30vw] border-2 w-[200px] h-[50px] bg-[#F97903]">Save</button>
-                </form>
+            <div class="w-[78vw] h-[630px] rounded-br-lg rounded-bl-lg bg-white shadow-2xl pt-6">
+                <div class="max-h-[500px] overflow-auto">
+                    <h1 class="text-4xl font-[700] text-center mb-6">All Teachers</h1><br>
+                
+                   <table class=" border-collapse  mx-[auto] text-[17px] ">
+                    <tr  style="position: sticky; transition: ease; top: 0; z-index: 1;background-color: white;">
+                        <th class="border pr-20 " style="border-left: none; border-right: none;" >Id</th>
+                        <th class="border pr-20 " style="border-left: none; border-right: none;" >Firstname</th>
+                        <th  class="border pr-20"style="border-left: none; border-right: none; ">Lastname</th>
+                        <th class="border pr-20 py-2"style="border-left: none; border-right: none;">PhoneNumber</th>
+                        <th class="border pr-20" style="border-left: none; border-right: none;">Class</th>
+                        <th class="border pr-20"style="border-left: none; border-right: none;">Home Address</th>
+                    </tr>
+             
+                    <tr>
+                        <td class="py-2 text-[15px]">001</td>
+                        <td class="pl-[10px] py-2 text-[15px]">Clienton</td>
+                        <td class="pl-4 py-2 text-[15px]">Joshua</td>
+                        <td class="pl-2 py-4 text-[15px]">07088025678</td>
+                        <td class=" py-2 text-[15px]">Primary 1</td>
+                        <td class="pl-[-50px] py-2 text-[15px]">3 Alfred Olaiya road idimu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" py-2 text-[15px]">002</td>
+                        <td class=" pl-2 py-2 text-[15px]">Jinadu</td>
+                        <td class="pl-1 py-2 text-[15px]">Erifolakemi</td>
+                        <td class="pl-[10px] py-4 text-[15px]">07088025678</td>
+                        <td class=" py-2 text-[15px]">Primary 2</td>
+                        <td class=" py-2 text-[15px]">8 Gbaga Street Adamo ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 text-[15px]">003</td>
+                        <td class=" pl-2 py-2 text-[15px]">Ekueme</td>
+                        <td class="px-4 py-2 text-[15px]">Adams</td>
+                        <td class=" pl-[10px] py-4 text-[15px]">07088025678</td>
+                        <td class="  py-2 text-[15px]">Primary 3</td>
+                        <td class=" py-2 text-[15px]">24 Benjamin Street parafa ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 text-[15px]">004</td>
+                        <td class=" pl-2 py-2 text-[15px]">Binabaku</td>
+                        <td class="pl-4 py-2 text-[15px]">Isreal</td>
+                        <td class=" pl-2 py-4 text-[15px]">07088025678</td>
+                        <td class="  py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">10 Peace Street Lucky Fiber ikorodu Lagos State </td>
+                     
+                    </tr>
+                    <tr>
+                        <td class="py-2 text-[15px]">005</td>
+                        <td class="pl-[10px] py-2 text-[15px]">Clienton</td>
+                        <td class="pl-4 py-2 text-[15px]">Joshua</td>
+                        <td class="pl-2 py-4 text-[15px]">07088025678</td>
+                        <td class=" py-2 text-[15px]">Primary 5</td>
+                        <td class="pl-[-50px] py-2 text-[15px]">3 Alfred Olaiya road idimu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 text-[15px]">006</td>
+                        <td class=" pl-2 py-2 text-[15px]">Jinadu</td>
+                        <td class="pl-1 py-2 text-[15px]">Erifolakemi</td>
+                        <td class="pl-[10px] py-4 text-[15px]">07088025678</td>
+                        <td class=" py-2 text-[15px]">Primary 6</td>
+                        <td class=" py-2 text-[15px]">8 Gbaga Street Adamo ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class="py-2 text-[15px]">007</td>
+                        <td class=" pl-2 py-2 text-[15px]">Ekueme</td>
+                        <td class="px-4 py-2 text-[15px]">Adams</td>
+                        <td class=" pl-[10px] py-4 text-[15px]">07088025678</td>
+                        <td class="  py-2 text-[15px]">Nursery 1</td>
+                        <td class=" py-2 text-[15px]">24 Benjamin Street parafa ikorodu Lagos State </td>
+                    </tr>
+             
+             </table>
+                </div>
             </div>
         </div>
     </div>
@@ -218,6 +242,7 @@
                viewstudent.style.display = "none";
             }
         }
+       
        
     </script>
 

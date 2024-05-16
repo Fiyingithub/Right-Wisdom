@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All Students</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Rancho&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#F9C18E]">
+    <div class="w-[100vw] h-[100vh] flex gap-4">
+        <div class=" w-[20vw] h-[100vh] bg-[#F97903] text-center pt-4">
+            <div class="w-[75px] h-[75px] border-2 border-orange-300 rounded-[300px] bg-white text-2xl text-[#F97903] font-[700] pt-[20px] mx-[auto]" style="text-shadow: 2px 2px  #D9700E;">RWS</div>
+
+            <h1 class="text-4xl font-[600] my-4 text-white" style="text-shadow: 2px 2px 2px black;">Right Wisdom <br> School</h1><br><br>
+
+            <div class="">
+                <div class="flex gap-2 items-center justify-center">
+                    <img class="w-6 h-6" src="/asset/dashboard.png" alt="dashboard-image">
+                    <a href="admin-dashboard.html" class="text-3xl font-[500] text-white">Dashboard</a>
+                    
+                </div><br>
+
+                <div class="">
+                    <div class="flex gap-2 justify-center items-center cursor-pointer">
+                        <img class="w-6 h-6" src="/asset/lecture.png" alt="dashboard-image">
+                        <p class="text-xl hover:font-[700] hover:text-2xl font-[500] text-white" onclick="teach()">Teacher</p>
+                        <img class="w-[18px] mt-[5px] ml-6 h-[18px] rounded-[50px] font-[700] bg-white" src="/asset/greater-than.png" alt="greater-than">
+                    </div>
+
+                    <div class="text-xl font-[500] mt-[10px]">
+                        <div class="flex gap-2 justify-center items-center hover:font-[700] hover:text-lg" style="display: none;" id="add">
+                            <b class="text-4xl text-white font-[700]">∙</b>
+                            <a class=" text-white -mt-8" href="addteacher.html">Add Teacher</a>
+                       </div>
+                       <div class="flex justify-center gap-2 items-center hover:font-[700] hover:text-lg ml-10" style="display: none;" id="view">
+                        <b class="text-4xl mt-10 text-white font-[700]">∙</b>
+                        <a class=" text-white -mt-8" href="viewteacher.html">View all Teachers</a>
+                           
+                       </div>
+                    </div>
+                </div><br>
+
+                <div class="">
+                    <div class="flex gap-2 justify-center items-center cursor-pointer">
+                        <img class="w-6 h-6" src="/asset/family.png" alt="Guardian image">
+                        <p class="text-xl hover:font-[700] hover:text-2xl font-[500] text-white" onclick="parent()">Guardian</p>
+                        <img class="w-[18px] mt-[5px] ml-4 h-[18px] rounded-[50px] font-[700] bg-white" src="/asset/greater-than.png" alt="greater-than">
+                    </div>
+
+                    <div class="text-xl font-[500] mt-[10px]">
+                        <div class="flex gap-2 justify-center items-center hover:font-[700] hover:text-lg" style="display: none;" id="guard">
+                            <b class="text-4xl text-white font-[700]">∙</b>
+                            <a class=" text-white -mt-8" href="addguardian.html">Add Guardian</a>
+                       </div>
+                    </div>
+                </div><br>
+
+                <div class="">
+                    <div class="flex gap-2 justify-center items-center cursor-pointer">
+                        <img class="w-6 h-6" src="/asset/scholar.png" alt="dashboard-image">
+                        <p class="text-xl hover:font-[700] hover:text-2xl font-[500] text-white" onclick="student()">Student</p>
+                        <img class="w-[18px] mt-[5px] ml-6 h-[18px] rounded-[50px] font-[700] bg-white" src="/asset/greater-than.png" alt="greater-than">
+                    </div>
+
+                    <div class="text-xl font-[500] mt-[10px]">
+                        
+                       <div class="flex justify-center gap-2 items-center hover:font-[700] hover:text-lg ml-8" style="display: none;" id="viewStudent">
+                          <b class="text-4xl mt-10 text-white font-[700]">∙</b>
+                          <a class=" text-white -mt-8" href="viewstudent.html">View all Students</a>   
+                       </div>
+                    </div>
+                </div><br>
+                
+                <div class="flex justify-center ml-[-70px] gap-2 items-center">
+                    <img class="w-6 h-6" src="/asset/exit (1).png" alt="exit">
+                    <a href="#" class="text-white  hover:font-[700] hover:text-xl font-[700]">Logout</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- -------Main Page-------- -->
+
+
+        <div class="lg:w-[78vw] w-[100vw] h-[100vh] pt-4">
+            <div class="w-[78vw] h-[70px] pl-8 gap-12 flex  items-center rounded-md bg-[white] shadow-md">
+                <div class="flex gap-1">
+                    <img class="w-8 h-8" src="/asset/protection.png" alt="">
+                <h1 class="text-xl font-[700]">Admin</h1>
+                </div>
+
+                <div class="flex gap-4 items-center w-[45vw] h-[50px] border-2 border-[#F97903] rounded-[25px] shadow-md">
+                    <form action="">
+                        <input class="outline-none bg-transparent w-[40vw] h-[50px] pl-8" type="search" placeholder="Search..." name="" id="">
+                    </form>
+                    <img class="w-4 h-4 cursor-pointer" src="/asset/search.png" alt="search">
+                </div>
+
+                <div class="flex items-center gap-6">
+                   <div class="flex gap-4">
+                       <img class="w-6 h-6 cursor-pointer" src="/asset/mail.png" alt="notification">
+                       <img class="w-6 h-6 cursor-pointer" src="/asset/notification.png" alt="notification">
+                   </div>
+
+                  <div class="flex gap-1 items-center">
+                        <img class="w-8 h-8  cursor-pointer rounded-[50px]" src="/asset/fantasy-domik-.jpg" alt="">
+
+                        <div class="text-center">
+                            <b>Hon. Adegbenga</b>
+                            <p>Admin</p>
+                        </div>
+                  </div>
+                    
+                </div>
+            </div><br>
+
+            <div class="w-[78vw] h-[630px] rounded-br-lg rounded-bl-lg bg-white shadow-2xl pt-6">
+                <div class="max-h-[500px] overflow-auto">
+                    <h1 class="text-4xl font-[700] text-center mb-6">All Students</h1><br>
+                
+                   <table class=" border-collapse  mx-[auto] text-[17px] ">
+                    <tr  style="position: sticky; transition: ease; top: 0; z-index: 1;background-color: white;">
+                        <th class="border pr-20 " style="border-left: none; border-right: none;" >RollNum</th>
+                        <th class="border pr-20 " style="border-left: none; border-right: none;" >Firstname</th>
+                        <th  class="border pr-20"style="border-left: none; border-right: none; ">Lastname</th>
+                        <th class="border pr-20 py-2"style="border-left: none; border-right: none;">Age</th>
+                        <th class="border pr-20" style="border-left: none; border-right: none;">Class</th>
+                        <th class="border pr-20"style="border-left: none; border-right: none;">Home Address</th>
+                    </tr>
+             
+                    <tr>
+                        <td class="pl-6 py-2 text-[15px]">001</td>
+                        <td class="pl-[10px] py-2 text-[15px]">Clienton</td>
+                        <td class="pl-4 py-2 text-[15px]">Joshua</td>
+                        <td class="pl-2 py-4 text-[15px]">10</td>
+                        <td class=" py-2 text-[15px]">Primary 4</td>
+                        <td class="pl-[-50px] py-2 text-[15px]">3 Alfred Olaiya road idimu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">002</td>
+                        <td class=" pl-2 py-2 text-[15px]">Jinadu</td>
+                        <td class="pl-1 py-2 text-[15px]">Erifolakemi</td>
+                        <td class="pl-[10px] py-4 text-[15px]">9</td>
+                        <td class=" py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">8 Gbaga Street Adamo ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">003</td>
+                        <td class=" pl-2 py-2 text-[15px]">Ekueme</td>
+                        <td class="px-4 py-2 text-[15px]">Adams</td>
+                        <td class=" pl-[10px] py-4 text-[15px]">8</td>
+                        <td class="  py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">24 Benjamin Street parafa ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">004</td>
+                        <td class=" pl-2 py-2 text-[15px]">Binabaku</td>
+                        <td class="pl-4 py-2 text-[15px]">Isreal</td>
+                        <td class=" pl-2 py-4 text-[15px]">10</td>
+                        <td class="  py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">10 Peace Street Lucky Fiber ikorodu Lagos State </td>
+                     
+                    </tr>
+                    <tr>
+                        <td class="pl-6 py-2 text-[15px]">005</td>
+                        <td class="pl-[10px] py-2 text-[15px]">Clienton</td>
+                        <td class="pl-4 py-2 text-[15px]">Joshua</td>
+                        <td class="pl-2 py-4 text-[15px]">10</td>
+                        <td class=" py-2 text-[15px]">Primary 4</td>
+                        <td class="pl-[-50px] py-2 text-[15px]">3 Alfred Olaiya road idimu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">006</td>
+                        <td class=" pl-2 py-2 text-[15px]">Jinadu</td>
+                        <td class="pl-1 py-2 text-[15px]">Erifolakemi</td>
+                        <td class="pl-[10px] py-4 text-[15px]">9</td>
+                        <td class=" py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">8 Gbaga Street Adamo ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">007</td>
+                        <td class=" pl-2 py-2 text-[15px]">Ekueme</td>
+                        <td class="px-4 py-2 text-[15px]">Adams</td>
+                        <td class=" pl-[10px] py-4 text-[15px]">8</td>
+                        <td class="  py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">24 Benjamin Street parafa ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">008</td>
+                        <td class=" pl-2 py-2 text-[15px]">Binabaku</td>
+                        <td class="pl-4 py-2 text-[15px]">Isreal</td>
+                        <td class=" pl-2 py-4 text-[15px]">10</td>
+                        <td class="  py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">10 Peace Street Lucky Fiber ikorodu Lagos State </td>
+                     
+                    </tr>
+                    <tr>
+                        <td class="pl-6 py-2 text-[15px]">009</td>
+                        <td class="pl-[10px] py-2 text-[15px]">Clienton</td>
+                        <td class="pl-4 py-2 text-[15px]">Joshua</td>
+                        <td class="pl-2 py-4 text-[15px]">10</td>
+                        <td class=" py-2 text-[15px]">Primary 4</td>
+                        <td class="pl-[-50px] py-2 text-[15px]">3 Alfred Olaiya road idimu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">010</td>
+                        <td class=" pl-2 py-2 text-[15px]">Jinadu</td>
+                        <td class="pl-1 py-2 text-[15px]">Erifolakemi</td>
+                        <td class="pl-[10px] py-4 text-[15px]">9</td>
+                        <td class=" py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">8 Gbaga Street Adamo ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">011</td>
+                        <td class=" pl-2 py-2 text-[15px]">Ekueme</td>
+                        <td class="px-4 py-2 text-[15px]">Adams</td>
+                        <td class=" pl-[10px] py-4 text-[15px]">8</td>
+                        <td class="  py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">24 Benjamin Street parafa ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">012</td>
+                        <td class=" pl-2 py-2 text-[15px]">Binabaku</td>
+                        <td class="pl-4 py-2 text-[15px]">Isreal</td>
+                        <td class=" pl-2 py-4 text-[15px]">10</td>
+                        <td class="  py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">10 Peace Street Lucky Fiber ikorodu Lagos State </td>
+                     
+                    </tr>
+                    <tr>
+                        <td class="pl-6 py-2 text-[15px]">013</td>
+                        <td class="pl-[10px] py-2 text-[15px]">Clienton</td>
+                        <td class="pl-4 py-2 text-[15px]">Joshua</td>
+                        <td class="pl-2 py-4 text-[15px]">10</td>
+                        <td class=" py-2 text-[15px]">Primary 4</td>
+                        <td class="pl-[-50px] py-2 text-[15px]">3 Alfred Olaiya road idimu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">014</td>
+                        <td class=" pl-2 py-2 text-[15px]">Jinadu</td>
+                        <td class="pl-1 py-2 text-[15px]">Erifolakemi</td>
+                        <td class="pl-[10px] py-4 text-[15px]">9</td>
+                        <td class=" py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">8 Gbaga Street Adamo ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">015</td>
+                        <td class=" pl-2 py-2 text-[15px]">Ekueme</td>
+                        <td class="px-4 py-2 text-[15px]">Adams</td>
+                        <td class=" pl-[10px] py-4 text-[15px]">8</td>
+                        <td class="  py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">24 Benjamin Street parafa ikorodu Lagos State </td>
+                    </tr>
+                    <tr>
+                        <td class=" pl-6 py-2 text-[15px]">016</td>
+                        <td class=" pl-2 py-2 text-[15px]">Binabaku</td>
+                        <td class="pl-4 py-2 text-[15px]">Isreal</td>
+                        <td class=" pl-2 py-4 text-[15px]">10</td>
+                        <td class="  py-2 text-[15px]">Primary 4</td>
+                        <td class=" py-2 text-[15px]">10 Peace Street Lucky Fiber ikorodu Lagos State </td>
+                     
+                    </tr>
+             
+             </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        function teach(){
+          let add=  document.getElementById("add");
+          let view= document.getElementById("view");
+          
+          if(add.style.display === "none"){
+               add.style.display = "block";
+            }
+          else{
+               add.style.display = "none";
+            }
+       
+          if(view.style.display === "none"){
+               view.style.display = "block";
+            }
+          else{
+               view.style.display = "none";
+            }
+        }
+
+       
+        function parent(){
+         let guard=  document.getElementById("guard");
+          
+          if(guard.style.display === "none"){
+               guard.style.display = "block";
+            }
+          else{
+               guard.style.display = "none";
+            }
+       
+        }
+
+        function student(){
+        //   let addstudent=  document.getElementById("addStudent");
+          let viewstudent= document.getElementById("viewStudent");
+       
+          if(viewstudent.style.display === "none"){
+               viewstudent.style.display = "block";
+            }
+          else{
+               viewstudent.style.display = "none";
+            }
+        }
+       
+       
+    </script>
+
+
+</body>
+</html>
